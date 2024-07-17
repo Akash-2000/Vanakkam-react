@@ -1,0 +1,55 @@
+1. What is Emmet? 
+    1. Emmet is a built-in featrue in visual-studio code
+    2. Emmet prevents you from writing large code by yourself
+       by providing emmet abberivation
+
+2. Difference between a Library and Framework?
+    * Library - It performs specific set of well defined operations
+    * Framework - It is known to be a skeleton, where the application
+                defines the content
+    * Inversion of control - when we call a method from a library we are in control
+    * but in framework the control is inverted
+    * Integration - integration of library is smooth but framework is impossible 
+
+3. What is CDN? Why do we use it?
+
+    * CDN is a geographically distributed group of servers that caches content close to end users.
+    * It allows for the quick transfer of assets needed for loading Internet content, including HTML pages, JavaScript files, stylesheets, images, and videos.
+
+    Features
+    * CDN lets users connect to a geographically closer data center. Less travel time means faster service.
+    * Hardware and software optimizations such as efficient load balancing and solid-state hard drives can help data reach the user faster.
+
+4. Why is React known as React?
+    When data in a React application changes, the components that depend on that data are automatically updated, which allows for efficient and seamless updates to the user interface. The name “React” reflects this reactive nature of the library.
+
+5. What is crossorigin in script tag?
+
+   * crossorigin sets method for Http request 
+   * CORS is a tool that allows web pages requesting for resources from another domain that is outside of their own domain
+
+6. What is diference between React and ReactDOM
+    * React - React is, at its core, a library for building user interfaces. It introduces the concept of components, which allow developers to craft reusable and self-contained UI elements.
+
+    * ReactDOM, on the other hand, acts as the glue between React’s Virtual DOM and the actual browser’s DOM. It provides the means to render React components into the DOM. 
+7. What is difference between react.development.js and react.production.js files via CDN?
+
+    1. react.development.js 
+      a.Detailed Error Messages
+      b. Warnings
+      c. Unminified Code
+      d. Hot Reloding
+    2. react.production.js
+       a. minified code
+       b. short error message no Warnings
+       c. no source maps
+
+useful links https://medium.com/@tanish_rajput/react-development-vs-production-choosing-the-right-tools-for-the-job-75206915ba5e
+
+8. difference between async and defer?
+
+    async -   when loading html request script tag parallely and add to tag when request completed and html parsing continues
+
+    defer -  script request added after the html redereing completed   
+
+
