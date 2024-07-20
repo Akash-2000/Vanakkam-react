@@ -1,0 +1,30 @@
+{
+  "name": "ignite-react",
+  "version": "1.0.0",
+  "description": "Introduction to how to ignite react app from the html",
+  "source": "index.html",
+  "scripts": {
+    "test": "jest",
+    "start": "npx parcel index.html" , 
+    "build": "npx parcel build index.html"
+  },
+  "keywords": [
+    "React",
+    "Akash",
+    "html"
+  ],
+  "author": "Akash",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ]
+}
