@@ -1,0 +1,39 @@
+1. JSX
+ Jsx is a syntax extension for javascript, uses html syntax like structure which is used 
+ to create the React element in a easier way and we also can add js in between the code 
+ it makes the development very easy
+
+2. React.createElement vs JSX
+    Both are used to create react elements 
+    It is very hard to write nested div in react.createEleement
+    Itis very easy in Jsx
+    It is hard to pass or execute javscript inside the create element
+
+3. Benefits of JSX
+    1. Makes the developer life easy
+    2. easy readable code
+    3. able to component composition easily
+    4. able to use react fucntional componnet inside another componnet
+
+4. Babel & Parcel role in Jsx
+    When we write a jsx code it is not a valida javascript to execute but Babel
+    is a beast when it sees the angular brackets it looks for the functional componnent
+    and redner the data using the react.createElement
+
+    parcel 
+5. components
+    in react every thing is a componet 
+    1. Function or class componnent
+    Functional components are simply javascript fucntions which return the JSX 
+
+6 Role of type attribute in script tag? What options can I use there?
+    if we write react in app.js it is not able to in scripts unless you specified the 
+    type as module which makes the script file code to treat as spearate module
+
+7{TitleComponent} vs {<TitleComponent/>} vs
+{<TitleComponent></TitleComponent>} in JSX
+These 3 are the writingg ways of react 
+1. react element
+2. react componnet
+3. another way of wriiting componennt
+

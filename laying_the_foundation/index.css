@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: beige;
+    margin: 0;
+    height: 90;
+}
+
+
+#site-search{
+    padding: 10;
+    width: 300;
+    border-radius: 10;
+
+}

@@ -1,0 +1,26 @@
+{
+  "name": "layingthefoundation",
+  "version": "1.0.0",
+  "description": "know more about jsx babel and react foundation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [
+    "babel",
+    "react",
+    "jsx"
+  ],
+  "author": "akash",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
