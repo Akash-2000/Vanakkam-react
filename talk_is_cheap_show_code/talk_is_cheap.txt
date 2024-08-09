@@ -1,0 +1,57 @@
+1. is Jsx is mandatory for react?
+    - we can create react applications without using the jsx 
+    - but it will make the code difficult to read and understand
+    - using component composition is hard with create React element
+2. Is ES6 is mandatory?
+    - Es6 is mandatoryfor creating the react element and react componenet
+    - mix with the JS6
+
+3. {TitleComponent} vs {<TitleComponent/>} vs
+{<TitleComponent></TitleComponent>} in JSX
+    - {element} which is one of the way declaring react element
+    - and the remaing are another ways of declaring a react component
+    - the other 2 ways can accept props
+4. How can I write comments in JSX?
+    - unlike javascripit comments, comments in JSX treated as javascripit extension
+    - {/* hello */} - single line comments
+    - {/*
+        hello 
+    */} - multi line comments
+
+5. What is <React.Fragment></React.Fragment> and <></> ?
+    - it is wrap elements together
+    - in situatiions of 
+        1. Returning multiple elements
+        2. Assigning multiple elements to a variable
+        3. Grouping elements with text
+        4. Rendering list of Fragments
+        link: https://react.dev/reference/react/Fragment
+
+6. What is Virtual DOM?
+    - Virtual DOM is a lightweight representation of actual DOM using the libraray REACT DOM
+    - whenever changes in the code it changes the virutal DOM after comparing with
+    - actual dom only the need changes re-renderd which makes the app efficent and smooth
+7. What is Reconciliation in React?
+    - when change the state or adding a new things the dom will change
+    - React uses this reconcilation algorithim to get optimized way of algorithim
+    - by checking the older and new changes
+8. what is Reat Fiber?
+    - React Fiber is an architecture is ongoing implementation of react core algorithim
+    - which helps to pritorize and inscrease the sutiability of areas like animation,layout
+    and gestures
+    - the purpose of the react fiber is to reimplement of the stack spacilaized for react elements which can use whenever you want
+9. Why we need keys in React? When do we need keys in React?
+    - when state changes React trigger a re-render when re-render the object
+    - while re-rendering keys helps us to idenfy the unique products and re-render only
+    - the unique items and keys used when going to reuse a component multiple times
+10 Can we use index as keys in React?
+    - it is not recommended to use index as React key
+    - becuase it may cause the issues while sorting and adding new data
+    - it is always good to have unique id
+11. what is props in React?
+    - props is like a function arguments which can be used in react functionl comonenets
+12. What is config driven UI?
+    - Config driven UI is the UI which can change based on the api response
+    
+
+

@@ -36,7 +36,7 @@ const Logo = <i class="fa fa-arrows" aria-hidden="true"></i>
 //Search Bar
 const SearchBar = () => {
   return(
-    <input type="search" id="site-search" name="q" />
+    <input type="search" id="site-search" name="q"  />
   )
 }
 //userIcon
