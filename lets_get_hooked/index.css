@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.headerContainer{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10;
+}
+
+ul{
+    display: flex;
+    list-style-type: none; /* Removes bullet points */
+    
+}
+ul li{
+    margin: 10;
+}
+
+.carContainer{
+    width: 200;
+    height: 200;
+    background-color: azure;
+    padding: 5;
+    margin: 10;
+    text-align: center;
+    border-radius: 10;
+}
+
+.carContainer:hover{
+    border: 1px solid grey;
+
+}
+
+.search-input{
+    padding: 5;
+    width: 250;
+    border-radius: 5;
+}
+
+.search-btn{
+    background-color: aquamarine;
+    padding: 5;
+    border: none;
+    border-radius: 5;
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+}

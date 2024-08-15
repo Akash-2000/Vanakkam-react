@@ -1,0 +1,13 @@
+What is the difference between Named Export, Default export and * as export?
+    -  if a function is an named export then it is need to import like this
+        example: import {Namedexport} from "./namedexport.js"
+    - if a function is an Default export then it is need to import like this  
+        example: import Namedexport from "./namedexport.js"
+    - 
+
+What are React Hooks?
+    - React Hooks are javascript functions which have the ability to update the state which cause the re-render on the DOM
+
+Why do we need a useState Hook?
+    - useState hook is used to store (or) maintain the state of the component
+    - when the state change cause by the setstate it rerenders the component
