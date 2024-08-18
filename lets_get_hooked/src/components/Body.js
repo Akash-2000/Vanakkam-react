@@ -9,7 +9,7 @@ export default function Body({ restaurants }) {
     console.log(searchText,"my searchText")
     //if it is an empty text returns the orignal array
     if(searchText == ''){
-      setRestaurants(restaurants)
+      setRestaurants(myrestaurants)
     }else{
         //check if the text matches with items
         console.log(myrestaurants)

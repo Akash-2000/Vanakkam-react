@@ -1,0 +1,55 @@
+1. Microservice
+    - Microservice is a type of architecture where each service has its own job and runs indepedently
+    - In Microservice each service deploys on a different port and then mapped to the same domain
+    - Microservice is langauge independednt we can write each service in a diiferent languages
+
+2. Monolith architecture
+    - In Monolith architecture every service comes under a one project
+    - it is language depenedent
+    - Monolith is hard to maintain
+
+3. UseEffect Hook
+    - while rendering a page , there are 2 types of page rendering
+    type1:  ui -> api (calls wait for the time to complete) -> render the ui
+    type2: ui -> render (data on page) -> api (api on page) -> render (data on page)
+    for this second method,we need to make an api call after the render for this functionality we need the useEffect Hook
+    it renders immediately after the UI renders
+4. Optional Chaining
+    - In optional Chaining if the data we want to require is undefined or null it short circuits the 
+      data call (?.) and evaluates to undefined instead of throwing an error
+
+5. Shimmer UI
+    - Shimmer UI dummy representaion how the page is going to look, after the data is rendered
+    - It helps the customers engage with the website rather than giving a page broken feel
+
+6. difference between JS express and JS statement
+    - JS Expressions can be as simple as a single value or variable, or they can be more complex and involve operators, function calls, and more. Expressions produce a result and can be used wherever values are expected.
+    - JS statement is a complete unit of execution. It performs some action or controls the flow of the program.
+      but their main purpose is to structure the program and dictate its behavior.
+
+7. Conditional Redering: 
+    - In react based on the state variable conditon or depend on the scenario
+        we need to render different componenent based on the state variable
+        
+        const [loading, setLoading]  = useState(true)
+
+        useEffect(() => {
+            setTimeout(() => {
+                setLoading(false)
+            },3000)
+        })
+
+        return loading ? (<p>loading...</p>) : (<p>data retrived bruh..</p)
+8. CORS:
+    - cross origin resource sharing
+        cors responds for sending or recieving data from the differnt origin
+
+
+9. async and await 
+ -  Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
+ - The await keyword is used to wait for a promise to resolve. It can only be used within an async block.
+    Await makes the code wait until the promise returns a result, allowing for cleaner and more manageable asynchronous code.
+
+10 Parses the response body as JSON and waits for this parsing to complete.
+
+
