@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardContainer from "./Card";
 import Shimmer from "./Shimmer";
+import { SWIGGY_URL } from "../utils/constants";
 
 export default function Body({ restaurants }) {
   //handelsearch
@@ -36,7 +37,7 @@ export default function Body({ restaurants }) {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+      const response = await fetch(SWIGGY_URL)
       const data = await response.json()
      
       setRestaurants(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)

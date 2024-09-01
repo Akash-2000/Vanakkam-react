@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.headerContainer{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10;
+}
+
+ul{
+    display: flex;
+    list-style-type: none; /* Removes bullet points */
+    
+}
+ul li{
+    margin: 10;
+}
+
+.carContainer{
+    width: 200;
+    height: 200;
+    background-color: azure;
+    padding: 5;
+    margin: 10;
+    text-align: center;
+    border-radius: 10;
+}
+
+.carContainer:hover{
+    border: 1px solid grey;
+
+}
+
+.search-input{
+    padding: 5;
+    width: 250;
+    border-radius: 5;
+}
+
+.search-btn{
+    background-color: aquamarine;
+    padding: 5;
+    border: none;
+    border-radius: 5;
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:"center"
+}
+
+.card{
+    width: 150;
+    height: 200;
+    background-color: rgb(219, 219, 219);
+    padding: 5;
+    margin: 10;
+    text-align: center;
+    border-radius: 10;
+}
+
+.login{
+    padding: 0 10px;
+    cursor: pointer;
+
+}
+
+.restaurant-header{
+    border: 1px solid teal;
+    border-radius: 10px;
+    margin:0 10%;
+    padding: 10;
+}
+
+.restaurant-body-tittle{
+    display: flex;
+    justify-content: space-around;
+    padding: 10;
+}
+
+.restaurant-items{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orangered;
+    background-color: thistle;
+    margin: 20;
+    justify-content: space-around;
+}
