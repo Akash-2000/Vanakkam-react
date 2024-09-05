@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { useEffect } from "react"
+import { useParams } from "react-router-dom"
 import RestaurantHeader from "./restaurant/RestaurantHeader"
 import RestaurantBody from "./restaurant/RestuarantBody"
 import Shimmer from "./Shimmer"
+import { RESTAURANT_URL } from "../utils/constants"
 
 
 const Restaurant = () =>{
@@ -11,12 +13,12 @@ const Restaurant = () =>{
     useEffect(() => {
         fetchData()
     }, [])
-
+    const {resId} = useParams()
     const fetchData = async () => {
         try {
-          const response = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0503886&lng=80.2485701&restaurantId=558222&catalog_qa=undefined&submitAction=ENTER")
+          const response = await fetch(RESTAURANT_URL+resId
+          )
           const data = await response.json()
-          console.log(data, "my data")
           setRestaurantData(data?.data?.cards)
         } catch (error) {
           console.warn(error)
@@ -25,14 +27,31 @@ const Restaurant = () =>{
 
     if(restaurantData == null ) return <Shimmer/>  
 
-    const {name, avgRating, totalRatingsString} = restaurantData[2]?.card?.card?.info
-    const restaurantMenu = restaurantData[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    console.log(restaurantMenu)
+    const restaurantInfo = restaurantData[2]?.card?.card?.info || {};
+    const { name, avgRating, totalRatingsString } = restaurantInfo;
+    
+    const restaurantMenu = restaurantData[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+    console.log(restaurantMenu, "menu data")
+    let filteredRestaurantData = restaurantMenu
+      .filter(({ card }) => card?.card?.categories)
+      .map(({ card }) => ({
+        data: card?.card?.categories[0]
+      }));
+      console.log(filteredRestaurantData, "filtered data")
+      if(filteredRestaurantData.length <=0){
+        filteredRestaurantData = restaurantMenu
+        .filter(({card}) => card?.card?.itemCards)
+        .map(({card}) =>  ({data: card?.card}))
+        console.log("Filterd data", filteredRestaurantData)
+      }
+      
+
+
+    
     return(
         <div className="restaurant-body">
           <RestaurantHeader name={name} avgRating={avgRating} totalRatingsString={totalRatingsString}/>
-          <RestaurantBody/>
-          <RestaurantBody/>
+          {filteredRestaurantData?.map(({data}) => <RestaurantBody key={data?.title} title={data?.title} itemCards={data?.itemCards}/>)}
         </div>
     )
 }

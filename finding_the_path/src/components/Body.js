@@ -39,9 +39,10 @@ export default function Body({ restaurants }) {
     try {
       const response = await fetch(SWIGGY_URL)
       const data = await response.json()
-     
-      setRestaurants(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-      setallResults(data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      const allRestaurant = data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []
+      console.log(allRestaurant, "HELLO")
+      setRestaurants(allRestaurant)
+      setallResults(allRestaurant)
     } catch (error) {
       console.warn(error)
     }
@@ -99,7 +100,7 @@ export default function Body({ restaurants }) {
         <input className="search-input" onChange={(e) => setSearchText(e.target.value)}></input>
         <button className="search-btn" onClick={handleSearch}>Search</button>
       </div>
-      <CardContainer data={myrestaurants} updateRestaurant={handleupdateRestaurant} />
+      <CardContainer data={myrestaurants}  />
     </>
   );
 }

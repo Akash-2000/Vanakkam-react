@@ -1,19 +1,21 @@
 import { CLOUDINARY_URL } from "../utils/constants";
-
 import { useRef, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 //cards for the data to render
 const Card = ({data}) => {
 
 
 
     return(
+        <Link to={`/restaurant/${data.id}`}>
         <div key={data.id} className="carContainer" >
+
             <h3>{data.name}</h3>
             <img src={`${CLOUDINARY_URL}${data.cloudinaryImageId}`} width={85} height={85}/>
             <p>{data.areaName}</p>
             <p>{data.totalRatingsString}</p>
         </div>
+        </Link>
     )
 };
 
@@ -68,7 +70,7 @@ const CardContainer = ({data, updateRestaurant}) => {
       }}>
       {data?.map(({info}) => {
           return(
-        <Card data={info} key={info.id}/>
+       <Card data={info} key={info.id}/> 
   
         )
       })}

@@ -1,40 +1,43 @@
-import { useState } from "react"
+import { useState } from "react";
 
-const RestaurantBody = () => {
-    const [isOpen, setIsOpen] = useState(true)
-    return(
-        <div className="restaurant-body">
-            <div className="restaurant-body-tittle">
-                <div>
-                    <h4>Ambur star briyani</h4>
-                </div>
-                <div onClick={() => setIsOpen(!isOpen)}>
-                {isOpen?
-                <i class="fa-solid fa-arrow-up"></i>:<i class="fa-solid fa-arrow-down"></i>}
-                </div>
-            </div>
-            {isOpen && <div className="restaurant-items">
-                <div>
-                <h3>Briyani</h3>
-                <p>$35</p>
-                <p>4.3(53)</p>
-                <h3>Briyani</h3>
-                </div>
-                <div>
-                <h3>Briyani</h3>
-                <p>$35</p>
-                <p>4.3(53)</p>
-                <h3>Briyani</h3>
-                </div>
-                <div>
-                <h3>Briyani</h3>
-                <p>$35</p>
-                <p>4.3(53)</p>
-                <h3>Briyani</h3>
-                </div>
-            </div>}
+const RestaurantBody = ({ title, itemCards }) => {
+  const [isOpen, setIsOpen] = useState(true);
+  return (
+    <div className="restaurant-body">
+      <div className="restaurant-body-tittle">
+        <div>
+          <h4>{title}</h4>
         </div>
-    )
-}
+        <div onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <i class="fa-solid fa-arrow-up"></i>
+          ) : (
+            <i class="fa-solid fa-arrow-down"></i>
+          )}
+        </div>
+      </div>
+      {isOpen && (
+        <div className="restaurant-items">
+          {itemCards?.map(({ card }) => {
+            const { info } = card || {};
+            const { name, price, ratings } = info || {};
+            const rating = ratings?.aggregatedRating?.rating;
+            const ratingCount = ratings?.aggregatedRating?.ratingCountV2;
 
-export default RestaurantBody
+            return (
+              <div key={info?.id}>
+                <h3>{name}</h3>
+                <p>{price / 100}</p>
+                <p>
+                  {rating} ({ratingCount} Rating)
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default RestaurantBody;

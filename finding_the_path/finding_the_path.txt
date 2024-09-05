@@ -1,0 +1,21 @@
+What are various ways to add images into our App? Explain with code examples
+    - we can use the image by import
+     <img src={myImage} alt="Description" />
+
+    - or can use the image url
+     <img src="https://example.com/image.jpg" alt="Description" />
+
+    - you can use image require 
+     <img src={require('./path/to/image.jpg').default} alt="Description" />
+● What would happen if we do console.log(useState())?
+    use state reutrn array of 2 elements it conatins initial state and astate updates function , iniitally ustaete() it is undefiend
+● How will useEffect behave if we don't add a dependency array ?
+    - if we don't add a dependency array our useEffect will run for each state changes
+● What is SPA?
+    - SPA is a type of web application the user interacts by dynamically rewrite the current page rather than entirely
+    render a new page from the server, this approach can make more fluid responsive user experience   
+ 
+● What is difference between Client Side Routing and Server Side Routing?
+    - Client side Routing is like rendering page based on the path and element configured in the front-end
+    - Server side routing is like rendering page by using the anchor tag wihch is not maintained any libraries like react-router-dom
+      it cause our page to refresh and gives poor usaer experience

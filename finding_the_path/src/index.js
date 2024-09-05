@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./components/Error";
 import About from "./components/About";
 import Restaurant from "./components/Restaurant";
+import Login from "./components/Login";
 
 
 const App = () => {
@@ -45,7 +46,10 @@ const appRouter = createBrowserRouter(
       ],
       errorElement: <Error/>
     },
-   
+   {
+    path: "/login",
+    element: <Login/>
+   }
   ]
 )
 

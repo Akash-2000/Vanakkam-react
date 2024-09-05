@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from 'react';
 const App = () => {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef();
-
   useEffect(() => {
     const handleScroll = () => {
       if (containerRef.current) {
