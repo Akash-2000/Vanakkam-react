@@ -1,0 +1,63 @@
+1. CREATE NESTED ROUTES
+Nested routes are a type of routing where one route linked to another route
+
+ createBrowserRouter([
+	{
+		path: "/",
+		element: <Home />,
+		children: [
+			{
+				path: "category/:category_id",
+				element: <CategoryPage />,
+			},
+			{
+				path: "category/:category_id/product/:product_id",
+				element: <ProductPage />,
+			},
+		],
+	},
+]);
+
+now the category/:category_id page comes is a nested route of APP
+
+2. CreateHashROuter and creatememoryRouter
+    1. CreateHashROuter
+    - this router is useful if you are unable to configure a webs erver directs all the traffic to 
+    the react router application
+    - this router uses a hash portion of url to manage application url, instead of normal url
+    - using hash url is not recimmended
+
+    2. creatememoryRouter
+    - instead of using the browser history, a memory router manges its history stack in a memory
+    -  it is used in testing tool and tools like storybook
+    - it can also use to running in react router in a  non-browser-environment
+
+3.  The order of life cycle method calls in Class Based Components
+    lifecycle method of class based component is
+    - first the constructor triggers
+    - the render happens 
+    - after the componentdidmount calls
+    - if any state changes it will call the component didupdate
+    - when the user leaves the page it call the component will unmount
+
+4  componentDidMount ?
+    - after the render function completed it will calll the component didupdate it will use for making the api calls
+    and fetch data immediately after the render cycle finishes
+
+5 componentWillUnmount?
+    - component will unmount calls whenever a user moves to other component
+    - it is majorly useful for cleaning the things like setInterval, eventListners we used this component
+    - before moving to the other componet , this method helps to clear the setInterval
+    - it prevent memory leaks and the component is properly cleaned up
+
+6.  Why do we use super(props) in constructor?
+   - without the use of the super(props) this.props would be undefined
+   - super(props) while the react component extends parent component it calss super method with props as a argumnet 
+     which call the parent constructor it ensures parent constructor is callled correctly and maintanence the innheritance chain correctly
+
+    -  by calling super(props) which enables the parent class to access the props for the some fucntions we make the children's props avaialable to the
+    parents class
+
+7. React's useEffect does not accept async functions because an async function always returns a Promise, which is not compatible with the expected return type of void or a cleanup function. Here are the main reasons:
+
+
