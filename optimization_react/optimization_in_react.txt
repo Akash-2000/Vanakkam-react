@@ -1,0 +1,31 @@
+When and why do we need lazy()?
+- when we have more than 100 components in a project, the bundle.js file becomes increased in size
+- it will be hard to laod the js in the browser which makes our website loads slow
+- to overcome this issue we split the components based on the logic and only renders or create a spearte.js bundle
+ only when needed it reduces the taking up unwanted space by the splited code
+- it makes our app optimized
+
+What is suspense?
+- whenever we use lazy on the react project , when we click on the page or tries to move to the page
+- react quickly navigate to the page before the code spliting done , it cause an error and not shown the results
+- to overcome this issue we wrap the component with an suspense component given by the react which have a fallback
+  which helps to show other component while code spliting is complete
+
+Why we got this error : A component suspended while responding to
+synchronous input. This will cause the UI to be replaced with a loading indicator.
+To fix, updates that suspend should be wrapped with startTransition? How does
+suspense fix this error?
+
+-  suspense have a fallback which renders the old code here
+
+Advantages and disadvantages of using this code splitting pattern?
+ - Faster Initial Load Time  
+ - Improved Performance
+ - Simpler Maintenance
+ - Better Mobile Performance
+
+ - disadvantages
+ - Initial Loading Delay
+
+
+When do we and why do we need suspense?
