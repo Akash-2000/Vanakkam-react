@@ -25,6 +25,7 @@ const Card = ({data}) => {
 const CardContainer = ({data, updateRestaurant}) => {
 
   const containerRef = useRef();
+  const PromotedCard = withPromotedLabel(Card)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +67,12 @@ const CardContainer = ({data, updateRestaurant}) => {
       >
       {data?.map(({info}) => {
           return(
-       <Card  data={info} key={info.id}/> 
+            <>
+        {info?.avgRating > 4.5 ? 
+        <PromotedCard data={info} key={info.id}/>:
+        <Card  data={info} key={info.id}/>
+        }
+        </>
   
         )
       })}
@@ -74,6 +80,18 @@ const CardContainer = ({data, updateRestaurant}) => {
     )
   };
 
+
+  /*HIGHER ORDER FUNCTION */
+  const withPromotedLabel = (Card) => {
+    return () => {
+      return(
+        <>
+        <label>Promoted</label>
+        <Card/>
+        </>
+      )
+    }
+  }
 
   export default CardContainer;
   

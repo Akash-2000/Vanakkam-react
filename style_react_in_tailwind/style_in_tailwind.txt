@@ -1,0 +1,11 @@
+1. How do we configure tailwind?
+
+Choose the bundler you have  follow the guidelines by the tailwind CSS
+- Install Tailwind CSS
+  "npx tailwindcss init"
+- Install tailwindcss and its peer dependencies via npm, and then
+  run the init command to generate "tailwind.config.js"
+- Create a .postcssrc file in your project root, and enable the tailwindcss plugin.
+- Configure your template paths
+  Add the paths to all of your template files in your tailwind.config.js file.
+- 
