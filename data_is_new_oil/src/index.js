@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react";
+import React, {lazy, Suspense, useState} from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,16 +10,21 @@ import Restaurant from "./components/Restaurant";
 import Login from "./components/Login";
 import Shimmer from "./components/Shimmer";
 // import Groceries from "./components/Groceries";
+import { userContext } from "./components/context/userContext";
+
 
 const Groceries = lazy(()=>import("./components/Groceries"))
 
 const App = () => {
+  const [username, setUserName] = useState('')
 
   return (
     <React.Fragment>
+      <userContext.Provider value={[username, setUserName]}>
       <Header />
       {/* <h1 style={{textAlign:"center"}}>Top Restaurants</h1> */}
      <Outlet/>
+     </userContext.Provider>
     </React.Fragment>
   );
 };
