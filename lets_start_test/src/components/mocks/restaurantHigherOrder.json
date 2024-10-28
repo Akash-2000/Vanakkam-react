@@ -1,0 +1,68 @@
+{
+    "id": "972131",
+    "name": "Theobroma",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/10/13/be48ef47-e5f4-431d-a2f9-d5ef22c992a3_972131.jpg",
+    "locality": "ECR",
+    "areaName": "Neelankarai",
+    "costForTwo": "₹300 for two",
+    "cuisines": [
+      "Bakery",
+      "Desserts",
+      "Beverages"
+    ],
+    "avgRating": 4.7,
+    "parentId": "1040",
+    "avgRatingString": "4.7",
+    "totalRatingsString": "8",
+    "sla": {
+      "deliveryTime": 39,
+      "lastMileTravel": 10.5,
+      "serviceability": "SERVICEABLE",
+      "slaString": "35-40 mins",
+      "lastMileTravelString": "10.5 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2024-10-28 00:00:00",
+      "opened": true
+    },
+    "badges": {},
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {},
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "₹121 OFF",
+      "subHeader": "ABOVE ₹1199",
+      "discountTag": "FLAT DEAL"
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "isNewlyOnboarded": true,
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+      "aggregatedRating": {
+        "rating": "--"
+      }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+  }

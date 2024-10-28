@@ -1,0 +1,8 @@
+Different types of testing
+1. unit testing
+2. integration testing
+3. E2E testing
+
+2. What is enzyme?
+Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output.
+

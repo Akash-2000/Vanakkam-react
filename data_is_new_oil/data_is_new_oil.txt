@@ -1,0 +1,15 @@
+1. what is prop drilling?
+    react only pass props from top to bottom it is impossible to get the state from child it leads to passing which 
+    are not necessary to that component this passing scenario is known as props drilling
+
+2. what is lifting the state up?
+
+    1. controlled component = control component by props
+    2. uncontrolled component = control component by state
+
+    1. to control a componet by its parent element we need to move the state from the child to parent, where in the parent we have the setstate which can the state
+    we change the state by the child using the setstate this is known as lifting the state up
+
+3. What is Context Provider and Context Consumer?
+   1. context.provider is used to pass the value across the childrens
+   2. context.Consumer is used in class based component which is mainly used to get the context values in class based component

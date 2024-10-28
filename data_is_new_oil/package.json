@@ -6,7 +6,11 @@
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "keywords": [
     "react",
@@ -24,7 +28,11 @@
     "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
+    "prettier": "3.3.3",
     "process": "^0.11.10",
     "tailwindcss": "^3.4.12"
   }

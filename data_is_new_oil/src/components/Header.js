@@ -7,11 +7,11 @@ import { useContext } from "react";
 
 const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
-  const onlineStatus = useOnlineStatus()
-  const [username, setUsername] = useContext(userContext)
-  const useCont = useContext(userContext)
-  console.log(useCont,"my use", setUsername)
-  console.log(username)
+  const onlineStatus = useOnlineStatus();
+  const [username, setUsername] = useContext(userContext);
+  const useCont = useContext(userContext);
+  console.log(useCont, "my use", setUsername);
+  console.log(username);
   return (
     <div className="flex bg-green-200 shadow-xl justify-between">
       <div>
@@ -19,30 +19,46 @@ const Header = () => {
       </div>
       <div>
         <ul className="flex">
-          <li className="m-4 p-2 font-light">Online status : {onlineStatus? "💚": "🛑"}</li>
-          <li className="m-4 p-2 font-light"><Link    to="/"><h3>Home</h3></Link></li>
-          <li className="m-4 p-2 font-light"><Link    to="/about"><h3>About us</h3></Link></li>
-          <li className="m-4 p-2 font-light"><Link    to="/contact"><h3>contact us</h3></Link></li>
-          <li className="m-4 p-2 font-light"><Link    to="/grocery"><h3>Groceries</h3></Link></li>
           <li className="m-4 p-2 font-light">
-                        <i class="fa-solid fa-cart-shopping"></i>
+            Online status : {onlineStatus ? "💚" : "🛑"}
+          </li>
+          <li className="m-4 p-2 font-light">
+            <Link to="/">
+              <h3>Home</h3>
+            </Link>
+          </li>
+          <li className="m-4 p-2 font-light">
+            <Link to="/about">
+              <h3>About us</h3>
+            </Link>
+          </li>
+          <li className="m-4 p-2 font-light">
+            <Link to="/contact">
+              <h3>contact us</h3>
+            </Link>
+          </li>
+          <li className="m-4 p-2 font-light">
+            <Link to="/grocery">
+              <h3>Groceries</h3>
+            </Link>
+          </li>
+          <li className="m-4 p-2 font-light">
+            <i class="fa-solid fa-cart-shopping"></i>
             <span className="ml-1">cart</span>
           </li>
           <li className="m-4 p-2 font-light">
             <button
               className="login"
               onClick={() => {
-                // btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login") 
-                const name = username.length > 1 ? "": "akash"
-                setUsername(name)
+                // btnNameReact === "Login" ? setbtnNameReact("Logout") : setbtnNameReact("Login")
+                const name = username.length > 1 ? "" : "akash";
+                setUsername(name);
               }}
             >
               {btnNameReact}
             </button>
           </li>
-          <li className="m-4 p-2 font-light">
-            {username}
-          </li>
+          <li className="m-4 p-2 font-light">{username}</li>
         </ul>
       </div>
     </div>

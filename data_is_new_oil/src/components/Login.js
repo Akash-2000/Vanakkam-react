@@ -1,17 +1,16 @@
-import React from 'react';
-import { Formik } from 'formik';
+import React from "react";
+import { Formik } from "formik";
 
 const Login = () => (
-  <div className='form-container'>
+  <div className="form-container">
     <h3>Login</h3>
     <Formik
-      initialValues={{ email: '', password: '' }}
+      initialValues={{ email: "", password: "" }}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           setSubmitting(false);
         }, 400);
       }}
-     
     >
       {({
         values,
@@ -23,11 +22,11 @@ const Login = () => (
         isSubmitting,
         /* and other goodies */
       }) => (
-        <form onSubmit={handleSubmit}  className="formik-container">
+        <form onSubmit={handleSubmit} className="formik-container">
           <input
             type="email"
             name="email"
-            className='FormInput'
+            className="FormInput"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
@@ -36,13 +35,13 @@ const Login = () => (
           <input
             type="password"
             name="password"
-            className='FormInput'
+            className="FormInput"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.password}
           />
           {errors.password && touched.password && errors.password}
-          <button type="submit" disabled={isSubmitting} className='submit-btn'>
+          <button type="submit" disabled={isSubmitting} className="submit-btn">
             Submit
           </button>
         </form>

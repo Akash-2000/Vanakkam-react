@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 //cards for the data to render
 const Card = ({ data }) => {
-  console.log(data)
+  console.log(data);
   return (
     <Link to={`/restaurant/${data.id}`}>
       <div
@@ -26,7 +26,7 @@ const CardContainer = ({ data, updateRestaurant }) => {
   const containerRef = useRef();
   console.log(data, "my data");
 
-  const PromotedCard = withPromotedLabel(Card)
+  const PromotedCard = withPromotedLabel(Card);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,13 +61,12 @@ const CardContainer = ({ data, updateRestaurant }) => {
   return (
     <div ref={containerRef} className="flex flex-wrap mx-4 px-4">
       {data?.map(({ info }) => {
-        
         return (
           <div key={info.id}>
             {info?.avgRating >= 4.5 ? (
               <PromotedCard data={info} />
             ) : (
-              <Card data={info}  />
+              <Card data={info} />
             )}
           </div>
         );
@@ -79,11 +78,13 @@ const CardContainer = ({ data, updateRestaurant }) => {
 /*HIGHER ORDER FUNCTION */
 const withPromotedLabel = (Card) => {
   return (props) => {
-    console.log("props in label", props)
+    console.log("props in label", props);
     return (
       <>
-        <label className="absolute bg-orange-500 text-white px-2 rounded-lg mt-3">Promoted</label>
-        <Card data={ props.data} />
+        <label className="absolute bg-orange-500 text-white px-2 rounded-lg mt-3">
+          Promoted
+        </label>
+        <Card data={props.data} />
       </>
     );
   };
